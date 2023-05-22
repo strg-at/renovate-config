@@ -14,9 +14,9 @@
 [![pre-commit][pre-commit-shield]][pre-commit-url]
 [![taskfile][taskfile-shield]][taskfile-url]
 
-# Project
+# STRG. Renovate config
 
-Short project description
+This repo stores reusable Renovate configs for various use cases.
 
 <details>
   <summary style="font-size:1.2em;">Table of Contents</summary>
