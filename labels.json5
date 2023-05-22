@@ -1,0 +1,107 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "labels for prs",
+  // https://docs.renovatebot.com/configuration-options/#packagerules
+  packageRules: [
+    // semantic update types
+    {
+      matchUpdateTypes: ["major"],
+      addLabels: ["major"],
+    },
+    {
+      matchUpdateTypes: ["minor"],
+      addLabels: ["minor"],
+    },
+    {
+      matchUpdateTypes: ["patch"],
+      addLabels: ["patch"],
+    },
+    // dependency types
+    {
+      matchDepTypes: ["optionalDependencies"],
+      addLabels: ["optional"],
+    },
+    {
+      matchDepTypes: ["peerDependencies"],
+      addLabels: ["peer"],
+    },
+    {
+      matchDepTypes: ["devDependencies"],
+      addLabels: ["dev"],
+    },
+    // managers
+    {
+      matchManagers: ["docker-compose"],
+      addLabels: ["renovate/container"],
+    },
+    {
+      matchManagers: ["dockerfile"],
+      addLabels: ["renovate/container"],
+    },
+    {
+      matchManagers: ["flux"],
+      addLabels: ["renovate/flux"],
+    },
+    {
+      matchManagers: ["github-actions"],
+      addLabels: ["renovate/github-actions"],
+    },
+    {
+      matchManagers: ["jenkins"],
+      addLabels: ["renovate/jenkins"],
+    },
+    {
+      matchManagers: ["kubernetes"],
+      addLabels: ["renovate/container"],
+    },
+    {
+      matchManagers: ["kustomize"],
+      addLabels: ["renovate/kustomize"],
+    },
+    {
+      matchManagers: ["npm"],
+      addLabels: ["renovate/npm"],
+    },
+    {
+      matchManagers: ["nvm"],
+      addLabels: ["renovate/nvm"],
+    },
+    {
+      matchManagers: ["pre-commit"],
+      addLabels: ["renovate/pre-commit"],
+    },
+    {
+      matchManagers: ["terraform"],
+      addLabels: ["terraform"],
+    },
+    {
+      matchManagers: ["terraform-version"],
+      addLabels: ["terraform"],
+    },
+    // datasources
+    {
+      matchDatasources: ["docker"],
+      addLabels: ["renovate/container"],
+    },
+    {
+      matchDatasources: ["helm"],
+      addLabels: ["renovate/helm"],
+    },
+    {
+      matchDatasources: ["npm"],
+      addLabels: ["renovate/npm"],
+    },
+    {
+      matchDatasources: ["pypi"],
+      addLabels: ["renovate/python"],
+    },
+    {
+      matchDatasources: ["terraform-module"],
+      addLabels: ["renovate/terraform"],
+    },
+    {
+      matchDatasources: ["terraform-provider"],
+      addLabels: ["renovate/terraform"],
+    },
+  ],
+}

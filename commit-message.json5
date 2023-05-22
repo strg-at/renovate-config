@@ -1,0 +1,30 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "semantic commits config with custom commit messages",
+  // https://docs.renovatebot.com/configuration-options/
+  semanticCommits: "enabled",
+  semanticCommitType: "chore",
+  semanticCommitScope: "deps",
+  // https://docs.renovatebot.com/configuration-options/#packagerules
+  packageRules: [
+    // semantic update types
+    {
+      matchUpdateTypes: ["major"],
+      semanticCommitType: "feat",
+    },
+    {
+      matchUpdateTypes: ["minor"],
+      semanticCommitType: "feat",
+    },
+    {
+      matchUpdateTypes: ["patch"],
+      semanticCommitType: "fix",
+    },
+    // managers
+    {
+      matchManagers: ["github-actions"],
+      semanticCommitType: "ci",
+      semanticCommitScope: "github-action",
+    },
+  ],
+}
