@@ -1,0 +1,38 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "strg base config",
+  extends: [
+    // https://docs.renovatebot.com/presets-default/
+    ":automergePr",
+    ":automergeRequireAllStatusChecks",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    ":enablePreCommit",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":gitSignOff",
+    ":ignoreModulesAndTests",
+    ":pinAllExceptPeerDependencies",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone",
+    ":prNotPending",
+    ":rebaseStalePrs",
+    ":renovatePrefix",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases",
+    "replacements:all",
+    "workarounds:all",
+    "github>strg-at/renovate-config:automerge",
+    "github>strg-at/renovate-config:commit-message",
+    "github>strg-at/renovate-config:labels",
+  ],
+  // https://docs.renovatebot.com/self-hosted-configuration/
+  onboarding: false,
+  requireConfig: "optional",
+  // https://docs.renovatebot.com/configuration-options/
+  dependencyDashboardTitle: ":robot: Renovate Dashboard",
+  platformCommit: true,
+  printConfig: true,
+  stopUpdatingLabel: "stop-updating",
+  suppressNotifications: ["prIgnoreNotification"],
+  timezone: "Europe/Vienna",
+}
