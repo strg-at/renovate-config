@@ -72,11 +72,11 @@
     },
     {
       matchManagers: ["terraform"],
-      addLabels: ["terraform"],
+      addLabels: ["renovate/terraform"],
     },
     {
       matchManagers: ["terraform-version"],
-      addLabels: ["terraform"],
+      addLabels: ["renovate/terraform"],
     },
     // datasources
     {
