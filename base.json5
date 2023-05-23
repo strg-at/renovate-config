@@ -21,9 +21,9 @@
     ":separatePatchReleases",
     "replacements:all",
     "workarounds:all",
-    "github>strg-at/renovate-config:automerge",
-    "github>strg-at/renovate-config:commit-message",
-    "github>strg-at/renovate-config:labels",
+    "github>strg-at/renovate-config:automerge.json5",
+    "github>strg-at/renovate-config:commit-message.json5",
+    "github>strg-at/renovate-config:labels.json5",
   ],
   // https://docs.renovatebot.com/self-hosted-configuration/
   onboarding: false,
