@@ -1,0 +1,8 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  // https://docs.renovatebot.com/modules/manager/terraform/
+  extends: [
+    "github>strg-at/renovate-config//terraform/automerge.json5",
+    "github>strg-at/renovate-config//terraform/range-strategy-widen.json5",
+  ],
+}
