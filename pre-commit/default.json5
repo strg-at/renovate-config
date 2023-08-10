@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  // https://docs.renovatebot.com/modules/manager/pre-commit/
+  "pre-commit": {
+    enabled: true,
+  },
+  extends: [
+    "github>strg-at/renovate-config//pre-commit/automerge.json5",
+    "github>strg-at/renovate-config//pre-commit/freeze-lucas-c.json5",
+  ],
+}
