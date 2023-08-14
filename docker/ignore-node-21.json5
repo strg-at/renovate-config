@@ -5,7 +5,7 @@
     {
       matchDatasources: ["docker"],
       matchPackageNames: ["node"],
-      allowedVersions: "!/^21/",
+      allowedVersions: "!/^21\\./",
     },
   ],
 }
