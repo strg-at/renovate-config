@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevent upgrade to node 19 (non-LTS)",
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      matchPackageNames: ["node"],
+      allowedVersions: "!/^19\\./",
+    },
+  ],
+}
