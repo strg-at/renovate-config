@@ -1,0 +1,30 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  // https://docs.renovatebot.com/configuration-options/#packagerules
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      addLabels: ["renovate/container"],
+    },
+    {
+      matchDatasources: ["helm"],
+      addLabels: ["renovate/helm"],
+    },
+    {
+      matchDatasources: ["npm"],
+      addLabels: ["renovate/npm"],
+    },
+    {
+      matchDatasources: ["pypi"],
+      addLabels: ["renovate/python"],
+    },
+    {
+      matchDatasources: ["terraform-module"],
+      addLabels: ["renovate/terraform"],
+    },
+    {
+      matchDatasources: ["terraform-provider"],
+      addLabels: ["renovate/terraform"],
+    },
+  ],
+}
