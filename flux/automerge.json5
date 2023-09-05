@@ -6,7 +6,6 @@
       matchManagers: ["flux"],
       automerge: true,
       matchUpdateTypes: ["minor", "patch", "digest"],
-      // ignoreTests: true,
       automergeType: "pr",
     },
   ],

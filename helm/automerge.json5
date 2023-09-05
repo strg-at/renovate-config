@@ -4,8 +4,8 @@
   packageRules: [
     {
       matchDatasources: ["helm"],
-      matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
+      matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",
     },
   ],

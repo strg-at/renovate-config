@@ -4,11 +4,9 @@
   packageRules: [
     {
       matchManagers: ["github-actions"],
-      matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
-      requiredStatusChecks: null,
+      matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",
-      // automergeType: "branch",
     },
   ],
 }
