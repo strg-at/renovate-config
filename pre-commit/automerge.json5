@@ -4,12 +4,9 @@
   packageRules: [
     {
       matchManagers: ["pre-commit"],
-      matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
-      ignoreTests: true,
-      requiredStatusChecks: null,
+      matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",
-      // automergeType: "branch",
     },
   ],
 }
