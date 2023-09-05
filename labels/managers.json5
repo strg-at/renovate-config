@@ -1,35 +1,7 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "labels for prs",
   // https://docs.renovatebot.com/configuration-options/#packagerules
   packageRules: [
-    // semantic update types
-    {
-      matchUpdateTypes: ["major"],
-      addLabels: ["major"],
-    },
-    {
-      matchUpdateTypes: ["minor"],
-      addLabels: ["minor"],
-    },
-    {
-      matchUpdateTypes: ["patch"],
-      addLabels: ["patch"],
-    },
-    // dependency types
-    {
-      matchDepTypes: ["optionalDependencies"],
-      addLabels: ["optional"],
-    },
-    {
-      matchDepTypes: ["peerDependencies"],
-      addLabels: ["peer"],
-    },
-    {
-      matchDepTypes: ["devDependencies"],
-      addLabels: ["dev"],
-    },
-    // managers
     {
       matchManagers: ["docker-compose"],
       addLabels: ["renovate/container"],
@@ -76,31 +48,6 @@
     },
     {
       matchManagers: ["terraform-version"],
-      addLabels: ["renovate/terraform"],
-    },
-    // datasources
-    {
-      matchDatasources: ["docker"],
-      addLabels: ["renovate/container"],
-    },
-    {
-      matchDatasources: ["helm"],
-      addLabels: ["renovate/helm"],
-    },
-    {
-      matchDatasources: ["npm"],
-      addLabels: ["renovate/npm"],
-    },
-    {
-      matchDatasources: ["pypi"],
-      addLabels: ["renovate/python"],
-    },
-    {
-      matchDatasources: ["terraform-module"],
-      addLabels: ["renovate/terraform"],
-    },
-    {
-      matchDatasources: ["terraform-provider"],
       addLabels: ["renovate/terraform"],
     },
   ],
