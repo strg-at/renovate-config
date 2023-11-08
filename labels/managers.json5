@@ -4,11 +4,11 @@
   packageRules: [
     {
       matchManagers: ["docker-compose"],
-      addLabels: ["renovate/container"],
+      addLabels: ["renovate/docker-compose"],
     },
     {
       matchManagers: ["dockerfile"],
-      addLabels: ["renovate/container"],
+      addLabels: ["renovate/dockerfile"],
     },
     {
       matchManagers: ["flux"],
@@ -24,7 +24,7 @@
     },
     {
       matchManagers: ["kubernetes"],
-      addLabels: ["renovate/container"],
+      addLabels: ["renovate/kubernetes"],
     },
     {
       matchManagers: ["kustomize"],
