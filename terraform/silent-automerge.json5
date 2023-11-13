@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "automerge terraform without a pr",
+  description: "terraform: silent automerge (without pr)",
   extends: ["github>strg-at/renovate-config//terraform/automerge.json5"],
   packageRules: [
     {
