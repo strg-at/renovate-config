@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "pre-commit: automerge non major versions",
+  description: "automerge pre-commit non major versions",
   packageRules: [
     {
       matchManagers: ["pre-commit"],

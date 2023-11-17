@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "pre-commit: silent automerge (without pr)",
+  description: "automerge pre-commit without a pr",
   extends: ["github>strg-at/renovate-config//pre-commit/automerge.json5"],
   packageRules: [
     {

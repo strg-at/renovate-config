@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "flux: automerge non major versions",
+  description: "automerge flux non major versions",
   packageRules: [
     {
       matchManagers: ["flux"],
