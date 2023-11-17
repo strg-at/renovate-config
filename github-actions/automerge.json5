@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "github-actions: automerge non major versions",
+  description: "automerge github-actions non major versions",
   packageRules: [
     {
       matchManagers: ["github-actions"],

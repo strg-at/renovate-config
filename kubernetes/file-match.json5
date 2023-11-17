@@ -1,7 +1,0 @@
-{
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "kubernetes: match yaml files under specific paths",
-  kubernetes: {
-    fileMatch: ["^(kubernetes/oci)/.+\\.ya?ml$"],
-  },
-}

@@ -1,9 +1,9 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "kustomize: automerge non major versions",
+  description: "automerge helm datasource non major versions",
   packageRules: [
     {
-      matchManagers: ["kustomize"],
+      matchDatasources: ["helm"],
       automerge: true,
       matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",
