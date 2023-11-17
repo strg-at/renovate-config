@@ -1,7 +1,7 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "flux: match yaml files under specific paths",
-  flux: {
+  description: "helm-values: match yaml files under specific paths",
+  "helm-values": {
     fileMatch: ["^(kubernetes/oci)/.+\\.ya?ml$"],
   },
 }
