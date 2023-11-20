@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "automerge terraform non major versions",
+  description: "terraform: automerge non major versions",
   packageRules: [
     {
       matchManagers: ["terraform"],

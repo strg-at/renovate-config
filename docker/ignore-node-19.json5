@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "prevent upgrade to node 19 (non-LTS)",
+  description: "docker: prevent upgrade to node 19 (non-LTS)",
   packageRules: [
     {
       matchDatasources: ["docker"],

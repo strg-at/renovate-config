@@ -1,9 +1,9 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "github-actions: automerge non major versions",
+  description: "helm-values: automerge non major versions",
   packageRules: [
     {
-      matchManagers: ["github-actions"],
+      matchManagers: ["helm-values"],
       automerge: true,
       matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",

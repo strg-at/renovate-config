@@ -1,7 +1,7 @@
 // https://github.com/grafana/loki/issues/9523
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "prevent automerge loki helmrelease",
+  description: "flux: prevent automerge loki helmrelease",
   packageRules: [
     {
       matchManagers: ["flux"],
