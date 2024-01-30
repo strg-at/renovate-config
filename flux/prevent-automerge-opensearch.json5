@@ -1,0 +1,12 @@
+// as prometheus addon needs to align with the release
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "flux: prevent automerge opensearch helmrelease",
+  packageRules: [
+    {
+      matchManagers: ["flux"],
+      matchPackageNames: ["opensearch"],
+      automerge: false,
+    },
+  ],
+}
