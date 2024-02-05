@@ -1,0 +1,19 @@
+// as prometheus addon needs to align with the release
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevention: automerge opensearch",
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      matchPackageNames: ["opensearchproject/opensearch"],
+      matchUpdateTypes: ["major", "minor"],
+      automerge: false,
+    },
+    {
+      matchDatasources: ["helm"],
+      matchPackageNames: ["opensearch"],
+      matchUpdateTypes: ["major", "minor"],
+      automerge: false,
+    },
+  ],
+}
