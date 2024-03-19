@@ -2,19 +2,25 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "strg base config",
   extends: [
-    // https://docs.renovatebot.com/presets-config/#configrecommended
-    ":ignoreModulesAndTests", // Ignore node_modules, bower_components, vendor and various test/tests directories.
-    "replacements:all",
-    "workarounds:all",
+    // https://docs.renovatebot.com/presets-config/
+    "config:best-practices",
+    "config:js-app",
+    "config:js-lib",
+    "mergeConfidence:all-badges",
+    // additional groups not part of best-practices
+    "group:googleapis",
+    "group:linters",
+    "group:postcss",
+    "group:test",
+    "group:vite",
 
     // https://docs.renovatebot.com/presets-default/
     ":automergeRequireAllStatusChecks", // Require all status checks to pass before any automerging.
     ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
-    ":pinAllExceptPeerDependencies", // Pin all dependency versions except peerDependencies.
     ":prConcurrentLimitNone", // Remove limit for open PRs at any time.
     ":prHourlyLimitNone", // Removes rate limit for PR creation per hour.
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
-    ":renovatePrefix", // Prefix renovate/ to all branch names.
+    ":renovatePrefix", // Add the renovate/ prefix to all branch names.
     ":separateMultipleMajorReleases", // Separate each major version of dependencies into individual branches/PRs.
     ":separatePatchReleases", // Separate patch and minor releases of dependencies into separate PRs.
 
@@ -27,6 +33,7 @@
     "github>strg-at/renovate-config//kubernetes/default.json5",
     "github>strg-at/renovate-config//kustomize/default.json5",
     "github>strg-at/renovate-config//labels/default.json5",
+    "github>strg-at/renovate-config//npm/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
     "github>strg-at/renovate-config//terraform/default.json5",
   ],
