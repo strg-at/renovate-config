@@ -3,7 +3,7 @@
   description: "strg base config",
   extends: [
     // https://docs.renovatebot.com/presets-config/
-    "config:best-practices",
+    "config:recommended",
     "config:js-app",
     "config:js-lib",
     "mergeConfidence:all-badges",
@@ -42,6 +42,7 @@
   requireConfig: "optional", // If a config file exists, Renovate will use it when it runs.
 
   // https://docs.renovatebot.com/configuration-options/
+  configMigration: true, // Enable this to get config migration PRs when needed.
   platformCommit: true, // Use platform API to perform commits instead of using Git directly, needed for Github App.
   printConfig: true, // If enabled, Renovate logs the fully resolved config for each repository, plus the fully resolved presets.
   stopUpdatingLabel: "stop-updating", // Label to make Renovate stop updating a PR.
