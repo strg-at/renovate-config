@@ -3,6 +3,10 @@
   // https://docs.renovatebot.com/configuration-options/#packagerules
   packageRules: [
     {
+      matchManagers: ["composer"],
+      addLabels: ["renovate/composer"],
+    },
+    {
       matchManagers: ["docker-compose"],
       addLabels: ["renovate/docker-compose"],
     },
@@ -19,6 +23,18 @@
       addLabels: ["renovate/github-actions"],
     },
     {
+      matchManagers: ["helmv3"],
+      addLabels: ["renovate/helmv3"],
+    },
+    {
+      matchManagers: ["helm-values"],
+      addLabels: ["renovate/helm-values"],
+    },
+    {
+      matchManagers: ["homebrew"],
+      addLabels: ["renovate/homebrew"],
+    },
+    {
       matchManagers: ["jenkins"],
       addLabels: ["renovate/jenkins"],
     },
@@ -31,6 +47,10 @@
       addLabels: ["renovate/kustomize"],
     },
     {
+      matchManagers: ["nix"],
+      addLabels: ["renovate/nix"],
+    },
+    {
       matchManagers: ["npm"],
       addLabels: ["renovate/npm"],
     },
@@ -39,8 +59,40 @@
       addLabels: ["renovate/nvm"],
     },
     {
+      matchManagers: ["pep621"],
+      addLabels: ["renovate/pep621"],
+    },
+    {
+      matchManagers: ["pip-compile"],
+      addLabels: ["renovate/pip-compile"],
+    },
+    {
+      matchManagers: ["pip_requirements"],
+      addLabels: ["renovate/pip-requirements"],
+    },
+    {
+      matchManagers: ["pip_setup"],
+      addLabels: ["renovate/pip-setup"],
+    },
+    {
+      matchManagers: ["pipenv"],
+      addLabels: ["renovate/pipenv"],
+    },
+    {
+      matchManagers: ["poetry"],
+      addLabels: ["renovate/poetry"],
+    },
+    {
       matchManagers: ["pre-commit"],
       addLabels: ["renovate/pre-commit"],
+    },
+    {
+      matchManagers: ["pyenv"],
+      addLabels: ["renovate/pyenv"],
+    },
+    {
+      matchManagers: ["setup-cfg"],
+      addLabels: ["renovate/setup-cfg"],
     },
     {
       matchManagers: ["terraform"],
@@ -48,7 +100,7 @@
     },
     {
       matchManagers: ["terraform-version"],
-      addLabels: ["renovate/terraform"],
+      addLabels: ["renovate/terraform-version"],
     },
   ],
 }
