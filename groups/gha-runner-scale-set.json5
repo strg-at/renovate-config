@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "group: gha-runner-scale-set",
+  packageRules: [
+    {
+      groupName: "gha-runner-scale-set",
+      matchDatasources: ["docker", "helm"],
+      matchPackageNames: [
+        "actions-runner-controller-charts/gha-runner-scale-set-controller",
+        "actions-runner-controller-charts/gha-runner-scale-set",
+        "gha-runner-scale-set-controller",
+        "gha-runner-scale-set",
+      ],
+      group: {
+        commitMessageTopic: "{{{groupName}}} group",
+        commitMessageSuffix: "",
+        semanticCommitScope: "arc",
+      },
+      separateMinorPatch: true,
+    },
+  ],
+}
