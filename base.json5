@@ -37,6 +37,7 @@
     "github>strg-at/renovate-config//npm/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
     "github>strg-at/renovate-config//terraform/default.json5",
+    "github>strg-at/renovate-config//prevention/default.json5",
   ],
   // https://docs.renovatebot.com/self-hosted-configuration/
   onboarding: false, // Require a Configuration PR first.

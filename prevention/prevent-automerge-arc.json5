@@ -1,0 +1,17 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevention: automerge arc",
+  packageRules: [
+    {
+      matchDatasources: ["docker", "helm"],
+      matchPackageNames: [
+        "actions-runner-controller-charts/gha-runner-scale-set-controller",
+        "actions-runner-controller-charts/gha-runner-scale-set",
+        "gha-runner-scale-set-controller",
+        "gha-runner-scale-set",
+      ],
+      matchUpdateTypes: ["major", "minor"],
+      automerge: false,
+    },
+  ],
+}

@@ -1,0 +1,8 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "github>strg-at/renovate-config//prevention/prevent-automerge-arc.json5",
+    "github>strg-at/renovate-config//prevention/prevent-automerge-opensearch.json5",
+    "github>strg-at/renovate-config//prevention/prevent-automerge-redis.json5",
+  ],
+}
