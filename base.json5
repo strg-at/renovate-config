@@ -26,16 +26,18 @@
 
     "github>strg-at/renovate-config//commit-message/default.json5",
     "github>strg-at/renovate-config//dashboard/default.json5",
+    "github>strg-at/renovate-config//groups/default.json5",
+    "github>strg-at/renovate-config//labels/default.json5",
     "github>strg-at/renovate-config//docker/default.json5",
     "github>strg-at/renovate-config//flux/default.json5",
     "github>strg-at/renovate-config//github-actions/default.json5",
     "github>strg-at/renovate-config//helm-values/default.json5",
     "github>strg-at/renovate-config//kubernetes/default.json5",
     "github>strg-at/renovate-config//kustomize/default.json5",
-    "github>strg-at/renovate-config//labels/default.json5",
     "github>strg-at/renovate-config//npm/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
     "github>strg-at/renovate-config//terraform/default.json5",
+    "github>strg-at/renovate-config//prevention/default.json5",
   ],
   // https://docs.renovatebot.com/self-hosted-configuration/
   onboarding: false, // Require a Configuration PR first.
