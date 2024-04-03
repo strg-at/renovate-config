@@ -9,6 +9,7 @@
         "actions-runner-controller-charts/gha-runner-scale-set",
         "gha-runner-scale-set-controller",
         "gha-runner-scale-set",
+        "ghcr.io/strg-at/containers/actions-runner",
       ],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
