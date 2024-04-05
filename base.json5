@@ -36,6 +36,7 @@
     "github>strg-at/renovate-config//kubernetes/default.json5",
     "github>strg-at/renovate-config//kustomize/default.json5",
     "github>strg-at/renovate-config//npm/default.json5",
+    "github>strg-at/renovate-config//nvm/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
     "github>strg-at/renovate-config//terraform/default.json5",
     "github>strg-at/renovate-config//prevention/default.json5",
