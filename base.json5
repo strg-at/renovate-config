@@ -28,6 +28,7 @@
     "github>strg-at/renovate-config//dashboard/default.json5",
     "github>strg-at/renovate-config//groups/default.json5",
     "github>strg-at/renovate-config//labels/default.json5",
+    "github>strg-at/renovate-config//composer/default.json5",
     "github>strg-at/renovate-config//docker/default.json5",
     "github>strg-at/renovate-config//flux/default.json5",
     "github>strg-at/renovate-config//github-actions/default.json5",
