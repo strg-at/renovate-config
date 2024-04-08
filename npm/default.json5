@@ -3,6 +3,6 @@
   // https://docs.renovatebot.com/modules/manager/npm/
   extends: [
     "npm:unpublishSafe",
-    "github>strg-at/renovate-config//nvm/automerge.json5",
+    "github>strg-at/renovate-config//npm/automerge.json5",
   ],
 }
