@@ -1,0 +1,18 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "group: flux",
+  packageRules: [
+    {
+      groupName: "Flux",
+      matchDatasources: ["docker", "github-tags", "github-releases"],
+      matchPackagePatterns: ["fluxcd"],
+      versioning: "semver",
+      group: {
+        commitMessageTopic: "{{{groupName}}} group",
+        commitMessageSuffix: "",
+        semanticCommitScope: "flux",
+      },
+      separateMinorPatch: true,
+    },
+  ],
+}
