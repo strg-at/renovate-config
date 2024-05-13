@@ -5,7 +5,7 @@
   packageRules: [
     {
       matchManagers: ["flux"],
-      matchPackageNames: ["redis"],
+      matchDepNames: ["redis"],
       automerge: false,
     },
   ],

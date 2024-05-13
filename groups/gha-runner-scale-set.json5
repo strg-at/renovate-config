@@ -5,7 +5,7 @@
     {
       groupName: "gha-runner-scale-set",
       matchDatasources: ["docker", "helm"],
-      matchPackageNames: [
+      matchDepNames: [
         "actions-runner-controller-charts/gha-runner-scale-set-controller",
         "actions-runner-controller-charts/gha-runner-scale-set",
         "gha-runner-scale-set-controller",

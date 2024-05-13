@@ -5,13 +5,13 @@
   packageRules: [
     {
       matchDatasources: ["docker"],
-      matchPackageNames: ["bitnami/redis"],
+      matchDepNames: ["bitnami/redis"],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
     {
       matchDatasources: ["helm"],
-      matchPackageNames: ["redis"],
+      matchDepNames: ["redis"],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
