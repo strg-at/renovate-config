@@ -4,11 +4,12 @@
   packageRules: [
     {
       matchDatasources: ["docker", "helm"],
-      matchPackageNames: [
+      matchDepNames: [
         "actions-runner-controller-charts/gha-runner-scale-set-controller",
         "actions-runner-controller-charts/gha-runner-scale-set",
         "gha-runner-scale-set-controller",
         "gha-runner-scale-set",
+        "ghcr.io/actions/actions-runner",
         "ghcr.io/strg-at/containers/actions-runner",
       ],
       matchUpdateTypes: ["major", "minor", "patch", "digest"],

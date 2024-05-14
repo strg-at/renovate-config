@@ -5,13 +5,13 @@
   packageRules: [
     {
       matchDatasources: ["docker"],
-      matchPackageNames: ["opensearchproject/opensearch"],
+      matchDepNames: ["opensearchproject/opensearch"],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
     {
       matchDatasources: ["helm"],
-      matchPackageNames: ["opensearch"],
+      matchDepNames: ["opensearch"],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
