@@ -1,0 +1,13 @@
+// needs maintenance
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevention: automerge varnish",
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      matchDepNames: ["varnish"],
+      matchUpdateTypes: ["major", "minor", "patch"],
+      automerge: false,
+    },
+  ],
+}
