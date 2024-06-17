@@ -6,7 +6,7 @@
     {
       matchDatasources: ["docker"],
       matchDepNames: ["varnish"],
-      matchUpdateTypes: ["major", "minor", "patch"],
+      matchUpdateTypes: ["major", "minor", "patch", "digest"],
       automerge: false,
     },
   ],
