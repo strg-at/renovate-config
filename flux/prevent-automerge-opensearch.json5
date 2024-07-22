@@ -5,7 +5,7 @@
   packageRules: [
     {
       matchManagers: ["flux"],
-      matchPackageNames: ["opensearch"],
+      matchDepNames: ["opensearch"],
       automerge: false,
     },
   ],

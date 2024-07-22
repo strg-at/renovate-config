@@ -5,8 +5,7 @@
     {
       groupName: "Flux",
       matchDatasources: ["docker", "github-tags", "github-releases"],
-      matchPackagePatterns: ["fluxcd"],
-      versioning: "semver",
+      matchDepPatterns: ["fluxcd"],
       group: {
         commitMessageTopic: "{{{groupName}}} group",
         commitMessageSuffix: "",
