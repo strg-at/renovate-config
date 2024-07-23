@@ -1,11 +1,11 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "kubernetes: disable api",
+  description: "prevention: automerge kubernetes-api",
   packageRules: [
     {
       matchManagers: ["kubernetes"],
       matchDatasources: ["kubernetes-api"],
-      enabled: false,
+      automerge: false,
     },
   ],
 }
