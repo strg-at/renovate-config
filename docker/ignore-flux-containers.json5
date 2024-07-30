@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "docker: prevent upgrade from fluxcd container images",
+  description: "docker: ignore upgrade of fluxcd container images",
   packageRules: [
     {
       matchDatasources: ["docker"],
