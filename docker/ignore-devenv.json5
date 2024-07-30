@@ -1,11 +1,11 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "docker: ignore upgrade to node 21 (non-LTS)",
+  description: "docker: ignore devenv",
   packageRules: [
     {
       matchDatasources: ["docker"],
-      matchDepNames: ["node"],
-      allowedVersions: "!/^21\\./",
+      matchDepNames: ["/^localhost:.*$/", "/^.*kind-registry:.*$/"],
+      enabled: false,
     },
   ],
 }
