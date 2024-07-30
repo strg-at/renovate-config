@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "docker: ignore devenv",
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      matchDepNames: ["/^localhost:.*$/", "/^.*kind-registry:.*$/"],
+      enabled: false,
+    },
+  ],
+}
