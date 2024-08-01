@@ -3,5 +3,6 @@
   extends: [
     "github>strg-at/renovate-config//groups/gha-runner-scale-set.json5",
     "github>strg-at/renovate-config//groups/flux.json5",
+    "github>strg-at/renovate-config//groups/opensearch.json5",
   ],
 }

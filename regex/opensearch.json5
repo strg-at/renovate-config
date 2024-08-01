@@ -1,0 +1,17 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "custom regex: opensearch plugins",
+  customManagers: [
+    {
+      customType: "regex",
+      description: "process updates for opensearch plugins",
+      fileMatch: ["\\.ya?ml(\\.j2)?$"],
+      matchStrings: [
+        "https://github.com/Aiven-Open/prometheus-exporter-plugin-for-opensearch/releases/download/(?<currentValue>\\d\\S+?)/prometheus-exporter-(?<currentValue2>\\S+?).zip",
+      ],
+      depNameTemplate: "Aiven-Open/prometheus-exporter-plugin-for-opensearch",
+      datasourceTemplate: "github-releases",
+      versioningTemplate: "loose",
+    },
+  ],
+}
