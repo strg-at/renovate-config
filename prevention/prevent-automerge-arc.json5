@@ -5,12 +5,21 @@
     {
       matchDatasources: ["docker", "helm"],
       matchDepNames: [
-        "gha-runner-scale-set-controller",
         "gha-runner-scale-set",
+        "gha-runner-scale-set-controller",
         "ghcr.io/strg-at/containers/actions-runner",
       ],
       matchUpdateTypes: ["major", "minor", "patch", "digest"],
       automerge: false,
+    },
+    // fix: prevent pin on oci helm charts
+    {
+      matchDepNames: [
+        "gha-runner-scale-set",
+        "gha-runner-scale-set-controller",
+      ],
+      matchUpdateTypes: ["pin", "pinDigest"],
+      enabled: false,
     },
   ],
 }
