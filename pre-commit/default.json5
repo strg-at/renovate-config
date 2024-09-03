@@ -1,5 +1,8 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   // https://docs.renovatebot.com/modules/manager/pre-commit/
-  extends: ["github>strg-at/renovate-config//pre-commit/automerge.json5"],
+  extends: [
+    ":enablePreCommit",
+    "github>strg-at/renovate-config//pre-commit/automerge.json5",
+  ],
 }
