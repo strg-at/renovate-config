@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "npm: automerge (without status checks)",
+  extends: ["github>strg-at/renovate-config//npm/automerge.json5"],
+  packageRules: [
+    {
+      matchManagers: ["npm"],
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automergeType: "pr",
+      requiredStatusChecks: null,
+    },
+  ],
+}
