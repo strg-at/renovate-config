@@ -1,0 +1,17 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevention: automerge google artifact registry",
+  packageRules: [
+    {
+      matchDatasources: ["docker"],
+      matchDepNames: ["europe-west3-docker.pkg.dev"],
+      matchUpdateTypes: ["major", "minor", "patch"],
+      automerge: false,
+    },
+    {
+      matchDepNames: ["europe-west3-docker.pkg.dev"],
+      matchUpdateTypes: ["pin", "pinDigest"],
+      enabled: false,
+    },
+  ],
+}

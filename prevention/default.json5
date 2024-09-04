@@ -3,6 +3,7 @@
   extends: [
     "github>strg-at/renovate-config//prevention/prevent-automerge-arc.json5",
     "github>strg-at/renovate-config//prevention/prevent-automerge-fluxcd.json5",
+    "github>strg-at/renovate-config//prevention/prevent-automerge-google-artifact-registry.json5",
     "github>strg-at/renovate-config//prevention/prevent-automerge-kubernetes-api.json5",
     "github>strg-at/renovate-config//prevention/prevent-automerge-opensearch.json5",
     "github>strg-at/renovate-config//prevention/prevent-automerge-redis.json5",
