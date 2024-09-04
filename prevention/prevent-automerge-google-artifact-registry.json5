@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "prevention: automerge gar",
+  description: "prevention: automerge google artifact registry",
   packageRules: [
     {
       matchDatasources: ["docker"],
