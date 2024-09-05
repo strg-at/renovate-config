@@ -4,12 +4,13 @@
   packageRules: [
     {
       matchDatasources: ["docker"],
-      matchDepNames: ["europe-west3-docker.pkg.dev"],
+      matchDepNames: ["europe-west3-docker.pkg.dev/**"],
       matchUpdateTypes: ["major", "minor", "patch"],
       automerge: false,
     },
     {
-      matchDepNames: ["europe-west3-docker.pkg.dev"],
+      matchDatasources: ["docker"],
+      matchDepNames: ["europe-west3-docker.pkg.dev/**"],
       matchUpdateTypes: ["pin", "pinDigest"],
       enabled: false,
     },
