@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: ["^Dockerfile$"],
+      matchStrings: [
+        '#\\s*renovate:\\s*?depName=(?<depName>.*?)?\\sENV .*?_VERSION="(?<currentValue>.*)"\\s',
+      ],
+      datasourceTemplate: "deb",
+    },
+  ],
+}
