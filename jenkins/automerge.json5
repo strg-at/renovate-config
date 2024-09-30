@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "jenkins: automerge non major versions",
+  packageRules: [
+    {
+      matchManagers: ["jenkins"],
+      automerge: true,
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automergeType: "pr",
+    },
+  ],
+}

@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "prevention: automerge jenkins",
+  packageRules: [
+    {
+      matchDatasources: ["docker", "helm"],
+      matchDepNames: ["jenkins", "ghcr.io/strg-at/containers/jenkins"],
+      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      automerge: false,
+    },
+  ],
+}
