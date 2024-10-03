@@ -22,7 +22,6 @@
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
     ":separateMultipleMajorReleases", // Separate each major version of dependencies into individual branches/PRs.
-    ":separatePatchReleases", // Separate patch and minor releases of dependencies into separate PRs.
 
     "github>strg-at/renovate-config//commit-message/default.json5",
     "github>strg-at/renovate-config//dashboard/default.json5",
@@ -34,7 +33,7 @@
     "github>strg-at/renovate-config//flux/default.json5",
     "github>strg-at/renovate-config//github-actions/default.json5",
     "github>strg-at/renovate-config//helm-values/default.json5",
-    "github>strg-at/renovate-config//jenkins/default.json5",
+    "github>strg-at/renovate-config//jenkins-plugins/default.json5",
     "github>strg-at/renovate-config//kubernetes/default.json5",
     "github>strg-at/renovate-config//kustomize/default.json5",
     "github>strg-at/renovate-config//npm/default.json5",

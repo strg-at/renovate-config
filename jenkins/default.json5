@@ -1,5 +1,0 @@
-{
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  // https://docs.renovatebot.com/modules/manager/jenkins/
-  extends: ["github>strg-at/renovate-config//jenkins/automerge.json5"],
-}
