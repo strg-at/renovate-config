@@ -1,18 +1,13 @@
-// https://github.com/bitnami/charts/issues/22202
+// its bitnami
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "prevention: automerge redis",
   packageRules: [
     {
-      matchDatasources: ["docker"],
-      matchDepNames: ["bitnami/redis"],
-      matchUpdateTypes: ["major", "minor"],
-      automerge: false,
-    },
-    {
-      matchDatasources: ["helm"],
-      matchDepNames: ["redis"],
-      matchUpdateTypes: ["major", "minor"],
+      matchDatasources: ["docker", "helm"],
+      matchDepNames: ["bitnami/redis", "redis"],
+      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      separateMinorPatch: false,
       automerge: false,
     },
   ],
