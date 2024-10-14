@@ -10,6 +10,7 @@
         "ghcr.io/strg-at/containers/actions-runner",
       ],
       matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      separateMinorPatch: false,
       automerge: false,
     },
     // fix: prevent pin on oci helm charts

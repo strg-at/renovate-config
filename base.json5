@@ -17,7 +17,7 @@
     // https://docs.renovatebot.com/presets-default/
     ":automergeRequireAllStatusChecks", // Require all status checks to pass before any automerging.
     ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
-    ":prConcurrentLimit10", // Limit to maximum 10 open PRs at any time.
+    ":prConcurrentLimitNone", // Remove limit for open PRs at any time.
     ":prHourlyLimitNone", // Removes rate limit for PR creation per hour.
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
