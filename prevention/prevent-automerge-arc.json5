@@ -9,7 +9,6 @@
         "gha-runner-scale-set-controller",
         "ghcr.io/strg-at/containers/actions-runner",
       ],
-      matchUpdateTypes: ["major", "minor", "patch", "digest"],
       separateMinorPatch: false,
       automerge: false,
     },

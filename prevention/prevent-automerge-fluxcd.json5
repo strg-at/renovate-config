@@ -3,8 +3,8 @@
   description: "prevention: automerge fluxcd",
   packageRules: [
     {
-      matchManagers: ["flux"],
-      matchDepPatterns: ["fluxcd"],
+      matchDatasources: ["github-releases"],
+      matchDepNames: ["fluxcd/flux2"],
       automerge: false,
     },
   ],
