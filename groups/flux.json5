@@ -4,14 +4,13 @@
   packageRules: [
     {
       groupName: "Flux",
-      matchDatasources: ["docker", "github-tags", "github-releases"],
-      matchDepPatterns: ["fluxcd"],
+      matchDatasources: ["github-releases"],
+      matchDepNames: ["fluxcd/flux2"],
       group: {
         commitMessageTopic: "{{{groupName}}} group",
         commitMessageSuffix: "",
         semanticCommitScope: "flux",
       },
-      separateMinorPatch: true,
     },
   ],
 }

@@ -6,7 +6,6 @@
     {
       matchDatasources: ["docker", "helm"],
       matchDepNames: ["bitnami/redis", "redis"],
-      matchUpdateTypes: ["major", "minor", "patch", "digest"],
       separateMinorPatch: false,
       automerge: false,
     },
