@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "app: github-runners",
+  description: "dependencies: github-runners",
   packageRules: [
     {
       description: "group: github-runners",

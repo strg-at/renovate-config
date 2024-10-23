@@ -1,7 +1,7 @@
 // its bitnami
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "app: redis",
+  description: "dependencies: redis",
   packageRules: [
     {
       description: "prevention: automerge redis",

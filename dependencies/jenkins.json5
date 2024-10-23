@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "app: jenkins",
+  description: "dependencies: jenkins",
   packageRules: [
     {
       matchDepNames: ["jenkins", "ghcr.io/strg-at/containers/jenkins"],

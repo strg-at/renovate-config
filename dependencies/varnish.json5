@@ -1,7 +1,7 @@
 // needs maintenance
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "app: varnish",
+  description: "dependencies: varnish",
   packageRules: [
     {
       description: "prevention: automerge varnish",
