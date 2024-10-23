@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "app: jenkins",
+  packageRules: [
+    {
+      matchDepNames: ["jenkins", "ghcr.io/strg-at/containers/jenkins"],
+      separateMinorPatch: false,
+      automerge: false,
+    },
+  ],
+}

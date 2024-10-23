@@ -1,0 +1,13 @@
+// its bitnami
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "app: redis",
+  packageRules: [
+    {
+      description: "prevention: automerge redis",
+      matchDepNames: ["bitnami/redis", "redis"],
+      separateMinorPatch: false,
+      automerge: false,
+    },
+  ],
+}
