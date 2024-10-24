@@ -3,8 +3,6 @@
   description: "strg base config",
   extends: [
     // https://docs.renovatebot.com/presets-config/
-    "config:js-app",
-    "config:js-lib",
     "docker:pinDigests",
     "group:googleapis",
     "group:linters",
@@ -21,7 +19,7 @@
     // https://docs.renovatebot.com/presets-default/
     ":automergeRequireAllStatusChecks", // Require all status checks to pass before any automerging.
     ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
-    ":pinDevDependencies", // Pin dependency versions for devDependencies.
+    ":pinAllExceptPeerDependencies", // Pin all dependency versions except peerDependencies.
     ":prConcurrentLimitNone", // Remove limit for open PRs at any time.
     ":prHourlyLimitNone", // Removes rate limit for PR creation per hour.
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
@@ -48,7 +46,6 @@
     "github>strg-at/renovate-config//poetry/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
     "github>strg-at/renovate-config//terraform/default.json5",
-    "github>strg-at/renovate-config//dependencies/default.json5", // to be removed
   ],
   // https://docs.renovatebot.com/self-hosted-configuration/
   onboarding: false, // Require a Configuration PR first.
