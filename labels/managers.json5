@@ -91,6 +91,10 @@
       addLabels: ["renovate/pyenv"],
     },
     {
+      matchManagers: ["regex"],
+      addLabels: ["renovate/regex"],
+    },
+    {
       matchManagers: ["setup-cfg"],
       addLabels: ["renovate/setup-cfg"],
     },
