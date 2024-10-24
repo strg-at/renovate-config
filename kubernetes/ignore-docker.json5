@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "kubernetes: ignore docker",
+  packageRules: [
+    {
+      matchManagers: ["kubernetes"],
+      matchDatasources: ["docker"],
+      enabled: false,
+    },
+  ],
+}

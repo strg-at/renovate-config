@@ -3,31 +3,31 @@
   description: "dependencies: environment separation",
   packageRules: [
     {
-      matchManagers: ["flux", "helm-values"],
+      matchManagers: ["flux", "helm-values", "regex"],
       matchFileNames: ["**/integration/**"],
       additionalBranchPrefix: "integration-",
       commitMessageSuffix: "integration",
     },
     {
-      matchManagers: ["flux", "helm-values"],
+      matchManagers: ["flux", "helm-values", "regex"],
       matchFileNames: ["**/staging/**"],
       additionalBranchPrefix: "staging-",
       commitMessageSuffix: "staging",
     },
     {
-      matchManagers: ["flux", "helm-values"],
+      matchManagers: ["flux", "helm-values", "regex"],
       matchFileNames: ["**/production/**"],
       additionalBranchPrefix: "production-",
       commitMessageSuffix: "production",
     },
     {
-      matchManagers: ["flux", "helm-values"],
+      matchManagers: ["flux", "helm-values", "regex"],
       matchFileNames: ["**/test/**"],
       additionalBranchPrefix: "test-",
       commitMessageSuffix: "test",
     },
     {
-      matchManagers: ["flux", "helm-values"],
+      matchManagers: ["flux", "helm-values", "regex"],
       matchFileNames: ["**/live/**"],
       additionalBranchPrefix: "live-",
       commitMessageSuffix: "live",
