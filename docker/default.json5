@@ -1,11 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   // https://docs.renovatebot.com/modules/datasource/docker/
-  // used by dockerfile, docker-compose and helm-values managers
-  extends: [
-    "github>strg-at/renovate-config//docker/automerge.json5",
-    "github>strg-at/renovate-config//docker/ignore-flux-containers.json5",
-    "github>strg-at/renovate-config//docker/ignore-node-19.json5",
-    "github>strg-at/renovate-config//docker/ignore-node-21.json5",
-  ],
+  // used by managers
+  extends: ["github>strg-at/renovate-config//docker/automerge.json5"],
 }

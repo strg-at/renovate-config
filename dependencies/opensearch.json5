@@ -1,0 +1,45 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: opensearch",
+  packageRules: [
+    {
+      description: "group: opensearch",
+      matchDepNames: [
+        "opensearchproject/opensearch",
+        "opensearch",
+        "Aiven-Open/prometheus-exporter-plugin-for-opensearch",
+      ],
+      groupName: "opensearch",
+      semanticCommitScope: "{{groupName}}",
+      commitMessageExtra: "to {{newVersion}}",
+      group: {
+        semanticCommitScope: "{{groupName}}",
+        commitMessageTopic: "group",
+        commitMessageExtra: "to {{newVersion}}",
+      },
+    },
+    {
+      description: "prevention: automerge opensearch",
+      matchDepNames: [
+        "opensearchproject/opensearch",
+        "opensearch",
+        "Aiven-Open/prometheus-exporter-plugin-for-opensearch",
+      ],
+      matchUpdateTypes: ["major", "minor"],
+      automerge: false,
+    },
+  ],
+  customManagers: [
+    {
+      description: "regex: updates for opensearch plugins",
+      customType: "regex",
+      fileMatch: ["\\.ya?ml(\\.j2)?$"],
+      matchStrings: [
+        "https://github.com/Aiven-Open/prometheus-exporter-plugin-for-opensearch/releases/download/(?<currentValue>\\d\\S+?)/prometheus-exporter-(?<currentValue2>\\S+?).zip",
+      ],
+      depNameTemplate: "Aiven-Open/prometheus-exporter-plugin-for-opensearch",
+      datasourceTemplate: "github-releases",
+      versioningTemplate: "loose",
+    },
+  ],
+}

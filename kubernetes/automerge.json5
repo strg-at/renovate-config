@@ -8,5 +8,10 @@
       matchUpdateTypes: ["minor", "patch", "digest"],
       automergeType: "pr",
     },
+    {
+      matchManagers: ["kubernetes"],
+      matchDatasources: ["kubernetes-api"],
+      automerge: false,
+    },
   ],
 }
