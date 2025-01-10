@@ -7,5 +7,10 @@
       separateMinorPatch: false,
       automerge: false,
     },
+    {
+      matchDepNames: ["google/cloud-sdk", "jenkins/inbound-agent"],
+      matchUpdateTypes: ["pin", "pinDigest"],
+      enabled: false,
+    },
   ],
 }
