@@ -28,6 +28,7 @@
       additionalBranchPrefix: "production-",
       commitMessageSuffix: "production",
       addLabels: ["env/production"],
+      automerge: false,
     },
     {
       matchManagers: ["flux", "helm-values", "regex"],
@@ -42,6 +43,7 @@
       additionalBranchPrefix: "live-",
       commitMessageSuffix: "live",
       addLabels: ["env/production"],
+      automerge: false,
     },
   ],
 }
