@@ -1,0 +1,16 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "custom regex: renovate comment line followed by an image definition with optional SHA256 digest in yaml files",
+  customManagers: [
+    {
+      customType: "regex",
+      description: "renovate comment line followed by an image definition with optional SHA256 digest in yaml files",
+      fileMatch: ["\\.ya?ml(\\.j2)?$"],
+      matchStrings: [
+        // # renovate: depName=ghcr.io/strg-at/containers/gcloud-workstation-vscode datasource=docker
+        // image: ghcr.io/strg-at/containers/gcloud-workstation-vscode:rolling@sha256:4f9d393526032f2a127e1a72bbfd90df225a39de45d4d6743d4b15b85730b721
+        "(?m:^[ \\t]*?# ?renovate: depName=(?<depName>\\S+) datasource=(?<datasource>\\S+)\\n[ \\t]*?(?<image>[^\\s:]+): (?<depName2>[^\\s:]+):(?<currentValue>\\S+)(@(?<currentDigest>sha256:\\S+)?))",
+      ],
+    },
+  ],
+}
