@@ -1,0 +1,34 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: db-init",
+  packageRules: [
+    {
+      description: "group: postgres-db-init",
+      matchDepNames: ["ghcr.io/strg-at/containers/postgres-db-init"],
+      groupName: "postgres-db-init",
+      semanticCommitScope: "{{groupName}}",
+      commitMessageExtra: "to {{newVersion}}",
+      group: {
+        semanticCommitScope: "{{groupName}}",
+        commitMessageTopic: "group",
+        commitMessageExtra: "to {{newVersion}}",
+      },
+      separateMinorPatch: false,
+      automerge: false,
+    },
+    {
+      description: "group: mysql-db-init",
+      matchDepNames: ["ghcr.io/strg-at/containers/mysql-db-init"],
+      groupName: "mysql-db-init",
+      semanticCommitScope: "{{groupName}}",
+      commitMessageExtra: "to {{newVersion}}",
+      group: {
+        semanticCommitScope: "{{groupName}}",
+        commitMessageTopic: "group",
+        commitMessageExtra: "to {{newVersion}}",
+      },
+      separateMinorPatch: false,
+      automerge: false,
+    },
+  ],
+}

@@ -57,7 +57,7 @@
   // https://docs.renovatebot.com/configuration-options/
   configMigration: true, // Renovate raises a pull request when it needs to migrate the Renovate config file.
   dependencyDashboard: true, // Enable Renovate Dependency Dashboard creation.
-  platformCommit: true, // Use platform API to perform commits instead of using Git directly, needed for Github App.
+  platformCommit: "enabled", // Use platform API to perform commits instead of using Git directly, needed for Github App.
   printConfig: true, // If enabled, Renovate logs the fully resolved config for each repository, plus the fully resolved presets.
   stopUpdatingLabel: "stop-updating", // Label to make Renovate stop updating a PR.
   suppressNotifications: ["prIgnoreNotification"],
