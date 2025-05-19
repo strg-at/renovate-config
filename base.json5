@@ -42,6 +42,7 @@
     "github>strg-at/renovate-config//labels/default.json5",
     "github>strg-at/renovate-config//npm/default.json5",
     "github>strg-at/renovate-config//nvm/default.json5",
+    "github>strg-at/renovate-config//pep621/default.json5",
     "github>strg-at/renovate-config//pip_requirements/default.json5",
     "github>strg-at/renovate-config//poetry/default.json5",
     "github>strg-at/renovate-config//pre-commit/default.json5",
