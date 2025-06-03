@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: workstation images",
+  packageRules: [
+    {
+      description: "group: workstation images",
+      matchDepNames: [
+        "ghcr.io/strg-at/containers/gcloud-workstation-phpstorm",
+        "ghcr.io/strg-at/containers/gcloud-workstation-vscode",
+      ],
+      groupName: "workstation images",
+      semanticCommitScope: "{{groupName}}",
+      commitMessageExtra: "to {{newVersion}}",
+      group: {
+        semanticCommitScope: "{{groupName}}",
+        commitMessageTopic: "group",
+        commitMessageExtra: "to {{newVersion}}",
+      },
+      automerge: false,
+    },
+  ],
+}
