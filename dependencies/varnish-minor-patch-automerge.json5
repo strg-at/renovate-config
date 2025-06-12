@@ -9,6 +9,8 @@
       separateMinorPatch: false,
       automerge: true,
       automergeType: "pr",
+      // automerges anytime between midnight and 5AM from Monday to Thursday
+      automergeSchedule: ["* 0-5 * * 1-4"],
     },
   ],
 }
