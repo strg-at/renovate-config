@@ -1,11 +1,10 @@
-// needs maintenance
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "varnish: automerge non major versions",
+  description: "varnish: automerge non major and non minor versions",
   packageRules: [
     {
       matchDepNames: ["varnish"],
-      matchUpdateTypes: ["minor", "patch", "digest"],
+      matchUpdateTypes: ["patch", "digest"],
       separateMinorPatch: false,
       automerge: true,
       automergeType: "pr",
