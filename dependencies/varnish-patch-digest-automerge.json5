@@ -1,0 +1,15 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "varnish: automerge non major and non minor versions",
+  packageRules: [
+    {
+      matchDepNames: ["varnish"],
+      matchUpdateTypes: ["patch", "digest"],
+      separateMinorPatch: false,
+      automerge: true,
+      automergeType: "pr",
+      // automerges anytime between midnight and 5AM from Monday to Thursday
+      automergeSchedule: ["* 0-5 * * 1-4"],
+    },
+  ],
+}
