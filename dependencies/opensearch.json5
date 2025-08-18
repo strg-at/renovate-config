@@ -24,33 +24,21 @@
       matchDepNames: [
         "opensearchproject/opensearch",
         "opensearch",
-        //"Aiven-Open/prometheus-exporter-plugin-for-opensearch",
-        "Virtimo/prometheus-exporter-plugin-for-opensearch",
+        "opensearch-project/opensearch-prometheus-exporter",
       ],
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
   ],
   customManagers: [
-    // {
-    //   description: "regex: updates for opensearch prometheus-exporter plugin",
-    //   customType: "regex",
-    //   fileMatch: ["\\.ya?ml(\\.j2)?$"],
-    //   matchStrings: [
-    //     "https://github.com/Aiven-Open/prometheus-exporter-plugin-for-opensearch/releases/download/(?<currentValue>\\d\\S+?)/prometheus-exporter-(?<currentValue2>\\S+?).zip",
-    //   ],
-    //   depNameTemplate: "Aiven-Open/prometheus-exporter-plugin-for-opensearch",
-    //   datasourceTemplate: "github-releases",
-    //   versioningTemplate: "loose",
-    // },
     {
       description: "regex: updates for opensearch prometheus-exporter plugin",
       customType: "regex",
       fileMatch: ["\\.ya?ml(\\.j2)?$"],
       matchStrings: [
-        "https://github.com/Virtimo/prometheus-exporter-plugin-for-opensearch/releases/download/(?<currentValue>\\d\\S+?)/prometheus-exporter-(?<currentValue2>\\S+?).zip",
+        "https://github.com/opensearch-project/opensearch-prometheus-exporter/releases/download/(?<currentValue>\\d\\S+?)/prometheus-exporter-(?<currentValue2>\\S+?).zip",
       ],
-      depNameTemplate: "Virtimo/prometheus-exporter-plugin-for-opensearch",
+      depNameTemplate: "opensearch-project/opensearch-prometheus-exporter",
       datasourceTemplate: "github-releases",
       versioningTemplate: "loose",
     },
