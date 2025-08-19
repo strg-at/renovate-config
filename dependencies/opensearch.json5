@@ -7,8 +7,7 @@
       matchDepNames: [
         "opensearchproject/opensearch",
         "opensearch",
-        //"Aiven-Open/prometheus-exporter-plugin-for-opensearch",
-        "Virtimo/prometheus-exporter-plugin-for-opensearch",
+        "opensearch-project/opensearch-prometheus-exporter",
       ],
       groupName: "opensearch",
       semanticCommitScope: "{{groupName}}",
