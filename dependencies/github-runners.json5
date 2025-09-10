@@ -17,7 +17,6 @@
         commitMessageTopic: "group",
         commitMessageExtra: "to {{newVersion}}",
       },
-      separateMinorPatch: false,
       automerge: false,
     },
     {

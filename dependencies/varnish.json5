@@ -1,8 +1,9 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "varnish: automerge patch and digest in all environments but production",
+  description: "dependencies: varnish",
   packageRules: [
     {
+      description: "automerge: varnish patches",
       matchDepNames: ["varnish"],
       matchUpdateTypes: ["patch", "digest"],
       matchFileNames: [
@@ -11,11 +12,17 @@
         "**/staging/**",
         "**/test/**",
       ],
-      separateMinorPatch: false,
+      separateMinorPatch: true,
       automerge: true,
       automergeType: "pr",
       // automerges anytime between midnight and 5AM from Monday to Thursday
       automergeSchedule: ["* 0-5 * * 1-4"],
+    },
+    {
+      description: "prevention: automerge varnish production",
+      matchDepNames: ["varnish"],
+      separateMinorPatch: true,
+      automerge: false,
     },
   ],
 }

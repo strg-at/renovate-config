@@ -26,7 +26,6 @@
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
     ":semanticPrefixFixDepsChoreOthers", // Use semantic commit type fix for dependencies and chore for all others if semantic commits are in use.
     ":separateMultipleMajorReleases", // Separate each major version of dependencies into individual branches/PRs.
-    ":separatePatchReleases", // Separate patch and minor releases of dependencies into separate PRs.
 
     "github>strg-at/renovate-config//commit-message/default.json5",
     "github>strg-at/renovate-config//composer/default.json5",
