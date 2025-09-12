@@ -21,7 +21,7 @@
     {
       description: "prevention: automerge varnish production",
       matchDepNames: ["varnish"],
-      separateMinorPatch: true,
+      matchFileNames: ["**/production/**", "**/live/**"],
       automerge: false,
     },
   ],
