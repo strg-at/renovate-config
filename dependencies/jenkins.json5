@@ -4,7 +4,6 @@
   packageRules: [
     {
       matchDepNames: ["jenkins", "ghcr.io/strg-at/containers/jenkins"],
-      separateMinorPatch: false,
       automerge: false,
     },
     {
