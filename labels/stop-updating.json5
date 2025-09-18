@@ -1,0 +1,10 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "labels: add stop-updating label for major versions",
+  packageRules: [
+    {
+      matchUpdateTypes: ["major"],
+      addLabels: ["stop-updating"],
+    },
+  ],
+}
