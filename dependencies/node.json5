@@ -6,7 +6,13 @@
       description: "stability: node",
       matchDepNames: ["node"],
       matchUpdateTypes: ["major", "minor", "patch"],
-      minimumReleaseAge: "3 days",
+      minimumReleaseAge: "7 days",
+    },
+    {
+      description: "stability: npm",
+      matchManagers: ["npm"],
+      matchUpdateTypes: ["major", "minor", "patch"],
+      minimumReleaseAge: "7 days",
     },
   ],
 }
