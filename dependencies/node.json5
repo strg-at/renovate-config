@@ -6,7 +6,7 @@
       description: "stability: node",
       matchDepNames: ["node"],
       matchUpdateTypes: ["major", "minor", "patch"],
-      minimumReleaseAge: "3 days",
+      minimumReleaseAge: "7 days",
     },
   ],
 }
