@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: keycloak",
+  packageRules: [
+    {
+      // freeze bitnami legacy
+      description: "prevention: disable updates for keycloak",
+      matchDepNames: ["bitnami/keycloak", "keycloak"],
+      enabled: false,
+    },
+  ],
+}
