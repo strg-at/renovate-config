@@ -4,10 +4,10 @@
   description: "dependencies: redis",
   packageRules: [
     {
-      description: "prevention: automerge redis",
+      // freeze bitnami legacy
+      description: "prevention: disable updates for redis",
       matchDepNames: ["bitnami/redis", "redis"],
-      separateMinorPatch: false,
-      automerge: false,
+      enabled: false,
     },
   ],
 }
