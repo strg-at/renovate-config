@@ -5,4 +5,11 @@
     "github>strg-at/renovate-config//flux/automerge.json5",
     "github>strg-at/renovate-config//flux/file-match.json5",
   ],
+  packageRules: [
+    {
+      description: "flux: disable pinDigests",
+      matchManagers: ["flux"],
+      pinDigests: false,
+    },
+  ],
 }

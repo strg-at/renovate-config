@@ -1,0 +1,28 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: fluxcd",
+  packageRules: [
+    {
+      description: "flux-operator: group",
+      groupName: "flux-operator",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["/flux-operator/"],
+      group: {
+        semanticCommitScope: "flux-operator",
+        commitMessageTopic: "group",
+      },
+      automerge: false, // to be evaluated later
+    },
+    {
+      description: "flux-instance: group",
+      groupName: "flux-instance",
+      matchDatasources: ["github-releases", "github-tags"],
+      matchPackageNames: ["/fluxcd/"],
+      group: {
+        semanticCommitScope: "flux-instance",
+        commitMessageTopic: "group",
+      },
+      automerge: false,
+    },
+  ],
+}
