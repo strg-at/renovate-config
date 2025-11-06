@@ -59,6 +59,10 @@
       addLabels: ["renovate/pypi"],
     },
     {
+      matchDatasources: ["python-version"],
+      addLabels: ["renovate/python-version"],
+    },
+    {
       matchDatasources: ["terraform-module"],
       addLabels: ["renovate/terraform-module"],
     },

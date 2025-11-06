@@ -3,8 +3,14 @@
   description: "labels: add stop-updating label for major versions",
   packageRules: [
     {
+      matchDatasources: ["node-version"],
       matchManagers: ["composer", "npm", "pip_requirements", "pep621"],
       matchUpdateTypes: ["major"],
+      addLabels: ["stop-updating"],
+    },
+    {
+      matchDatasources: ["python-version"],
+      matchUpdateTypes: ["major", "minor"],
       addLabels: ["stop-updating"],
     },
   ],
