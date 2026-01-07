@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dockerfile: automerge major versions",
+  packageRules: [
+    {
+      matchManagers: ["dockerfile"],
+      matchUpdateTypes: ["major"],
+      automergeType: "pr",
+      automerge: true,
+    },
+  ],
+}
