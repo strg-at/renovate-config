@@ -5,6 +5,5 @@
     "github>strg-at/renovate-config//labels/dependencies.json5",
     "github>strg-at/renovate-config//labels/managers.json5",
     "github>strg-at/renovate-config//labels/semantic.json5",
-    "github>strg-at/renovate-config//labels/stop-updating.json5",
   ],
 }

@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "pep621: add stop-updating label for major versions",
+  packageRules: [
+    {
+      matchManagers: ["pep621"],
+      matchUpdateTypes: ["major"],
+      addLabels: ["stop-updating"],
+    },
+  ],
+}
