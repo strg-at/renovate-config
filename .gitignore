@@ -55,7 +55,7 @@
 !.prettierignore
 !.prettierrc.yaml
 !.yamllint.yaml
-base.json5
+!base.json5
 !CODEOWNERS
 !LICENSE
 !README.md
