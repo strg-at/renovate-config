@@ -1,11 +1,12 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "pep621: automerge major versions",
-  extends: ["github>strg-at/renovate-config//pep621/automerge.json5"],
   packageRules: [
     {
       matchManagers: ["pep621"],
-      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      matchUpdateTypes: ["major"],
+      automergeType: "pr",
+      automerge: true,
     },
   ],
 }

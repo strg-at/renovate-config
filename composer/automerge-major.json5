@@ -1,11 +1,12 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "composer: automerge major versions",
-  extends: ["github>strg-at/renovate-config//composer/automerge.json5"],
   packageRules: [
     {
       matchManagers: ["composer"],
-      matchUpdateTypes: ["major", "minor", "patch", "digest"],
+      matchUpdateTypes: ["major"],
+      automergeType: "pr",
+      automerge: true,
     },
   ],
 }
