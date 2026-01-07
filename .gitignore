@@ -1,14 +1,69 @@
-# Editors
-.vscode/
-.idea/
+# Ignore everything
+*
 
-# OS artifacts
-.DS_Store
-Thumbs.db
+# Allow files and directories
+!.github/
+!.github/**
+!.taskfiles/
+!.taskfiles/**
+!.commit-message/
+!.commit-message/**
+!composer/
+!composer/**
+!dashboard/
+!dashboard/**
+!dependencies/
+!dependencies/**
+!docker/
+!docker/**
+!docker-compose/
+!docker-compose/**
+!flux/
+!flux/**
+!github-actions/
+!github-actions/**
+!helm-values/
+!helm-values/**
+!jenkins-plugins/
+!jenkins-plugins/**
+!kubernetes/
+!kubernetes/**
+!kustomize/
+!kustomize/**
+!labels/
+!labels/**
+!npm/
+!npm/**
+!nvm/
+!nvm/**
+!pep621/
+!pep621/**
+!pip_requirements/
+!pip_requirements/**
+!poetry/
+!poetry/**
+!pre-commit/
+!pre-commit/**
+!regex/
+!regex/**
+!terraform/
+!terraform/**
+!.editorconfig
+!.gitignore
+!.markdownlint.yaml
+!.pre-commit-config.yaml
+!.prettierignore
+!.prettierrc.yaml
+!.yamllint.yaml
+base.json5
+!CODEOWNERS
+!LICENSE
+!README.md
+!Taskfile.yaml
 
-# vscode-sops
-.decrypted~*.yaml
-
-# Env files
-*.envrc
-*.env
+# Ignore unnecessary files and directories inside allowed directories
+# This should go after the allowed directories
+**/*~
+**/*.log
+**/.DS_Store
+**/Thumbs.db
