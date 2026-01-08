@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "composer: automerge major versions",
+  packageRules: [
+    {
+      matchManagers: ["composer"],
+      matchUpdateTypes: ["major"],
+      automergeType: "pr",
+      automerge: true,
+    },
+  ],
+}

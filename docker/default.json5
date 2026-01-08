@@ -2,5 +2,6 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   // https://docs.renovatebot.com/modules/datasource/docker/
   // used by managers
+  // TODO: move ignore-devenv to dependencies/devenv.json5 and delete docker folder
   extends: ["github>strg-at/renovate-config//docker/automerge.json5"],
 }
