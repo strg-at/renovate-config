@@ -47,6 +47,10 @@
       addLabels: ["renovate/kustomize"],
     },
     {
+      matchManagers: ["mise"],
+      addLabels: ["renovate/mise"],
+    },
+    {
       matchManagers: ["nix"],
       addLabels: ["renovate/nix"],
     },

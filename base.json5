@@ -40,6 +40,7 @@
     "github>strg-at/renovate-config//kubernetes/default.json5",
     "github>strg-at/renovate-config//kustomize/default.json5",
     "github>strg-at/renovate-config//labels/default.json5",
+    "github>strg-at/renovate-config//mise/default.json5",
     "github>strg-at/renovate-config//npm/default.json5",
     "github>strg-at/renovate-config//nvm/default.json5",
     "github>strg-at/renovate-config//pep621/default.json5",
