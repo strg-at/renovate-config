@@ -32,6 +32,8 @@
 !kustomize/**
 !labels/
 !labels/**
+!mise/
+!mise/**
 !npm/
 !npm/**
 !nvm/
