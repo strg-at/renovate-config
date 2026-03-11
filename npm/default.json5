@@ -3,6 +3,6 @@
   // https://docs.renovatebot.com/modules/manager/npm/
   extends: [
     "github>strg-at/renovate-config//npm/automerge.json5",
-    "github>strg-at/renovate-config//npm/stabilitydays.json5",
+    "github>strg-at/renovate-config//npm/release-age.json5",
   ],
 }
