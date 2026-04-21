@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: base images",
+  packageRules: [
+    {
+      description: "base images: automerge non major versions",
+      matchDepNames: ["busybox", "curlimages/curl", "nginx"],
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+    },
+  ],
+}
