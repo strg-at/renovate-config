@@ -17,6 +17,7 @@
         commitMessageTopic: "group",
         commitMessageExtra: "to {{newVersion}}",
       },
+      minimumGroupSize: 2,
     },
     {
       description: "prevention: automerge opensearch",
