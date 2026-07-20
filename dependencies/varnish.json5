@@ -9,9 +9,10 @@
       matchFileNames: [
         "**/devenv/**",
         "**/integration/**",
-        "**/staging/**",
+        "**/strg-integration/**",
         "**/test/**",
         "**/production/**",
+        "**/strg-production/**",
       ],
       separateMinorPatch: true,
       automerge: true,
@@ -22,7 +23,7 @@
     {
       description: "prevention: automerge varnish production",
       matchDepNames: ["varnish"],
-      matchFileNames: ["**/production/**", "**/live/**"],
+      matchFileNames: ["**/live/**", "**/production/**", "**/strg-production"],
       automerge: false,
     },
   ],
