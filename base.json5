@@ -60,7 +60,11 @@
   configMigration: true, // Renovate raises a pull request when it needs to migrate the Renovate config file.
   dependencyDashboard: true, // Enable Renovate Dependency Dashboard creation.
   lockFileMaintenance: {
+    // Refresh lock files to keep them up-to-date
     enabled: true,
+    schedule: [
+      "* 3-6 * * 1", // Monday mornings before 7AM
+    ],
     automerge: true,
   },
   platformCommit: "enabled", // Use platform API to perform commits instead of using Git directly, needed for Github App.
