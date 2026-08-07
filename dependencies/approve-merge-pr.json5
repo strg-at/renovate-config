@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: approve-merge-pr",
+  packageRules: [
+    {
+      description: "approve-merge-pr: automerge non major versions",
+      matchDepNames: ["ghcr.io/strg-at/containers/approve-merge-pr"],
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+    },
+  ],
+}
