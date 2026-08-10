@@ -29,6 +29,14 @@
       matchUpdateTypes: ["major", "minor"],
       automerge: false,
     },
+    {
+      description: "opensearch-snapshots-alerting: enable automerge",
+      matchDatasources: ["docker"],
+      matchDepNames: [
+        "ghcr.io/strg-at/containers/opensearch-snapshots-alerting",
+      ],
+      automerge: true,
+    },
   ],
   customManagers: [
     {

@@ -4,8 +4,20 @@
   packageRules: [
     {
       description: "base images: automerge non major versions",
-      matchDepNames: ["busybox", "curlimages/curl", "nginx"],
+      matchDepNames: [
+        "busybox",
+        "curlimages/curl",
+        "google/cloud-sdk",
+        "nginx",
+      ],
       matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+    },
+    {
+      description: "base images: automerge major versions",
+      matchDepNames: ["google/cloud-sdk"],
+      matchUpdateTypes: ["major"],
       automerge: true,
       automergeType: "pr",
     },
