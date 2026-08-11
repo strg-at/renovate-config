@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: kube-prometheus-stack",
+  packageRules: [
+    {
+      description: "kube-prometheus-stack: automerge major versions",
+      matchDepNames: ["kube-prometheus-stack"],
+      matchUpdateTypes: ["major"],
+      automerge: true,
+      automergeType: "pr",
+    },
+  ],
+}
