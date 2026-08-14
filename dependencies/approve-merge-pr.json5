@@ -8,6 +8,7 @@
       matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
       automergeType: "pr",
+      requiredStatusChecks: null,
     },
   ],
 }
