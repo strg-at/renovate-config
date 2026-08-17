@@ -13,7 +13,6 @@
         commitMessageTopic: "operator",
       },
       minimumGroupSize: 3,
-      separateMinorPatch: true,
     },
   ],
 }
