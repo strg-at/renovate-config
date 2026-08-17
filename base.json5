@@ -3,6 +3,11 @@
   description: "strg base config",
   extends: [
     // https://docs.renovatebot.com/presets-config/
+    // TODO: enable when "test" environments are offboarded
+    // "config:best-practices",
+    // "mergeConfidence:all-badges",
+    // "security:openssf-scorecard",
+    // TODO: switch to best-practices when "test" environments are offboarded and remove below
     "docker:pinDigests",
     "group:googleapis",
     "group:linters",
@@ -15,16 +20,16 @@
     "mergeConfidence:all-badges",
     "replacements:all",
     "workarounds:all",
+    ":semanticPrefixFixDepsChoreOthers",
+    // remove until here
 
     // https://docs.renovatebot.com/presets-default/
     ":automergeRequireAllStatusChecks", // Require all status checks to pass before any automerging.
+    ":disableRateLimiting", // Remove hourly and concurrent rate limits.
     ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
     ":pinAllExceptPeerDependencies", // Pin all dependency versions except peerDependencies.
-    ":prConcurrentLimitNone", // Remove limit for open PRs at any time.
-    ":prHourlyLimitNone", // Removes rate limit for PR creation per hour.
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
-    ":semanticPrefixFixDepsChoreOthers", // Use semantic commit type fix for dependencies and chore for all others if semantic commits are in use.
 
     "github>strg-at/renovate-config//commit-message/default.json5",
     "github>strg-at/renovate-config//composer/default.json5",
