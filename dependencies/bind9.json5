@@ -4,13 +4,41 @@
   packageRules: [
     {
       // see https://endoflife.date/bind-9
+      description: "bind9: stable (even minor) only, split patch from branch adoption",
       matchDatasources: ["docker"],
       matchDepNames: ["internetsystemsconsortium/bind9"],
       allowedVersions: "/^\\d+\\.\\d*[02468](?:\\.\\d+)?$/",
-      automerge: false,
+      separateMajorMinor: true,
+      separateMinorPatch: true,
+      // bounds PR creation for ALL bind9 update types to the weeknight window
       schedule: ["* 0-5 * * 1-4"],
     },
     {
+      // patch + digest on the current stable branch -> automatic, overnight
+      description: "bind9: automerge patch + digest on the current stable branch",
+      matchDatasources: ["docker"],
+      matchDepNames: ["internetsystemsconsortium/bind9"],
+      matchUpdateTypes: ["patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+      automergeSchedule: ["* 0-5 * * 1-4"],
+    },
+    {
+      // branch adoption (minor, 9.18 -> 9.20) and any major -> reviewed PR.
+      // Explicit false is required: the shared docker/automerge.json5 rule
+      // would otherwise automerge minor. Overrides only work because this
+      // preset is extended AFTER base in the consuming repo.
+      description: "bind9: branch adoption + major require a reviewed PR",
+      matchDatasources: ["docker"],
+      matchDepNames: ["internetsystemsconsortium/bind9"],
+      matchUpdateTypes: ["minor", "major"],
+      automerge: false,
+    },
+    {
+      // These images ship together on the bind9 pod, so gate ALL
+      // their update activity to weeknights. separateMajorMinor is false
+      // org-wide in base.json5 — re-enable it here so major can be held back
+      // while minor/patch flow through.
       description: "bind9: schedule updates to weeknights + split major",
       matchDatasources: ["docker"],
       matchDepNames: [
@@ -18,10 +46,11 @@
         "prometheuscommunity/bind-exporter",
       ],
       separateMajorMinor: true,
+      // overnight, hours 0–5 (00:00–06:00), Monday to Thursday — Europe/Vienna
       schedule: ["* 0-5 * * 1-4"],
     },
     {
-      description: "bind9: automerge non major versions for openvpn-client & bind-exporter images",
+      description: "bind9: automerge non major versions",
       matchDatasources: ["docker"],
       matchDepNames: [
         "ghcr.io/strg-at/containers/openvpn",
@@ -30,6 +59,7 @@
       matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
       automergeType: "pr",
+      // only automerge inside the same weeknight window
       automergeSchedule: ["* 0-5 * * 1-4"],
     },
     {
