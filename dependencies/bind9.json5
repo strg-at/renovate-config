@@ -1,0 +1,46 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: bind9",
+  packageRules: [
+    {
+      // see https://endoflife.date/bind-9
+      matchDatasources: ["docker"],
+      matchDepNames: ["internetsystemsconsortium/bind9"],
+      allowedVersions: "/^\\d+\\.\\d*[02468](?:\\.\\d+)?$/",
+      automerge: false,
+      schedule: ["* 0-5 * * 1-4"],
+    },
+    {
+      description: "bind9: schedule updates to weeknights + split major",
+      matchDatasources: ["docker"],
+      matchDepNames: [
+        "ghcr.io/strg-at/containers/openvpn",
+        "prometheuscommunity/bind-exporter",
+      ],
+      separateMajorMinor: true,
+      schedule: ["* 0-5 * * 1-4"],
+    },
+    {
+      description: "bind9: automerge non major versions for openvpn-client & bind-exporter images",
+      matchDatasources: ["docker"],
+      matchDepNames: [
+        "ghcr.io/strg-at/containers/openvpn",
+        "prometheuscommunity/bind-exporter",
+      ],
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+      automergeSchedule: ["* 0-5 * * 1-4"],
+    },
+    {
+      description: "bind9: major versions require a reviewed PR",
+      matchDatasources: ["docker"],
+      matchDepNames: [
+        "ghcr.io/strg-at/containers/openvpn",
+        "prometheuscommunity/bind-exporter",
+      ],
+      matchUpdateTypes: ["major"],
+      automerge: false,
+    },
+  ],
+}
