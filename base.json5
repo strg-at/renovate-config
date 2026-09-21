@@ -28,7 +28,6 @@
     ":disableRateLimiting", // Remove hourly and concurrent rate limits.
     ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
     ":pinAllExceptPeerDependencies", // Pin all dependency versions except peerDependencies.
-    ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
 
     "github>strg-at/renovate-config//commit-message/default.json5",
