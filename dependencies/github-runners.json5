@@ -3,13 +3,10 @@
   description: "dependencies: github-runners",
   packageRules: [
     {
-      description: "group: github-runners",
-      matchDepNames: [
-        "gha-runner-scale-set",
-        "gha-runner-scale-set-controller",
-        "ghcr.io/strg-at/containers/actions-runner",
-      ],
+      description: "github-runners: group",
       groupName: "github-runners",
+      matchDatasources: ["docker"],
+      matchPackageNames: ["/gha-runner-scale-set/"],
       semanticCommitScope: "{{groupName}}",
       commitMessageExtra: "to {{newVersion}}",
       group: {
@@ -17,6 +14,7 @@
         commitMessageTopic: "group",
         commitMessageExtra: "to {{newVersion}}",
       },
+      minimumGroupSize: 2,
       automerge: false,
     },
     {
