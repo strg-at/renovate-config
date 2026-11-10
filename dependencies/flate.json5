@@ -1,0 +1,17 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "dependencies: flate",
+  packageRules: [
+    {
+      description: "flate: group",
+      groupName: "flate",
+      matchDatasources: ["github-releases", "github-tags"],
+      matchPackageNames: ["/home-operations/flate/"],
+      semanticCommitScope: "flate",
+      group: {
+        semanticCommitScope: "flate",
+        commitMessageTopic: "group",
+      },
+    },
+  ],
+}
