@@ -26,7 +26,6 @@
     // https://docs.renovatebot.com/presets-default/
     ":automergeRequireAllStatusChecks", // Require all status checks to pass before any automerging.
     ":disableRateLimiting", // Remove hourly and concurrent rate limits.
-    ":enableVulnerabilityAlertsWithLabel(security)", // Raise PR when vulnerability alerts are detected with label security.
     ":pinAllExceptPeerDependencies", // Pin all dependency versions except peerDependencies.
     ":rebaseStalePrs", // Rebase existing PRs any time the base branch has been updated.
     ":renovatePrefix", // Add the renovate/ prefix to all branch names.
@@ -69,7 +68,7 @@
   suppressNotifications: ["prIgnoreNotification"],
   timezone: "Europe/Vienna",
 
-  // Refresh lock files to keep them up-to-date
+  // refresh lock files to keep them up-to-date
   lockFileMaintenance: {
     enabled: true,
     schedule: [
@@ -78,7 +77,15 @@
     automerge: true,
   },
 
-  // Handle update types
+  // renovate handles vulnerability alerts and their prs
+  vulnerabilityAlerts: {
+    enabled: true,
+    labels: ["security"],
+    vulnerabilityFixStrategy: "highest",
+    prConcurrentLimit: 0,
+  },
+
+  // handle update types
   separateMajorMinor: false,
   separateMinorPatch: false,
   separateMultipleMajor: false,
